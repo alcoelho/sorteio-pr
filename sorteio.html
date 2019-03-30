@@ -2,24 +2,36 @@
 <meta charset="utf-8">
 <html>
 	<head>
-		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="css\style.css">
+		<link rel="stylesheet" type="text/css" href="https://unpkg.com/material-components-web/dist/material-components-web.min.css">
+<!-- 		<link rel="stylesheet" type="text/css" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"> -->
 		<title>Sorteio PetroRio</title>
 		<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
 		<script type="text/javascript">
-			document.addEventListener('DOMContentLoaded', function () {
-				const numeroSorteado = Math.floor((Math.random() * 130) + 1);
-				console.log(numeroSorteado);
-				//document.getElementById('numero_sorteado').innerHTML = numeroSorteado;
-				const aaa = $('#numero_sorteado').html(numeroSorteado);
-				console.log(aaa);
-			});
+			// document.addEventListener('DOMContentLoaded', function () {
+			// 	//document.getElementById('numero_sorteado').innerHTML = numeroSorteado;
+			// });
 
+			function exibeNumeroSorteado() {
+				const numeroSorteado = Math.floor((Math.random() * 130) + 1);
+
+				$('#numero-sorteado').html("")
+				$('#numero-sorteado').append('NÚMERO SORTEADO: <span id="numero_sorteado"></span>');
+				$('#numero_sorteado').html(numeroSorteado);
+				$('.lottery-button').remove();
+				$('.button').html(`<button class="mdc-button mdc-button--raised" id="new-button" onClick="exibeNumeroSorteado()">Clique aqui para sortear novamente</button>`)
+
+			}
 		</script>
+		
 	</head>
 	<body>
-		<div id="numero-sorteado">
-			NÚMERO SORTEADO: <span id="numero_sorteado"></span>
-		</div>
+		<button class="mdc-button mdc-button--raised lottery-button" onClick="exibeNumeroSorteado()">Clique aqui para sortear</button>
+		<div id="numero-sorteado"></div>
+		<div class="button"></div>
 	</body>
+	<script type="text/javascript">
+		
+	</script>
 </html>
 
