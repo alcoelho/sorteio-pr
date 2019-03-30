@@ -3,7 +3,7 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="css\style.css">
-		<link rel="stylesheet" type="text/css" href="https://unpkg.com/material-components-web/dist/material-components-web.min.css">
+		<link rel="stylesheet" type="text/css" href="css\material-components-web.min.css">
 <!-- 		<link rel="stylesheet" type="text/css" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"> -->
 		<title>Sorteio PetroRio</title>
 		<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
@@ -19,19 +19,15 @@
 				$('#numero-sorteado').append('NÚMERO SORTEADO: <span id="numero_sorteado"></span>');
 				$('#numero_sorteado').html(numeroSorteado);
 				$('.lottery-button').remove();
-				$('.button').html(`<button class="mdc-button mdc-button--raised" id="new-button" onClick="exibeNumeroSorteado()">Clique aqui para sortear novamente</button>`)
-
+				$('.button').html(`<button class="mdc-button mdc-button--raised lottery-button" id="new-button" onClick="exibeNumeroSorteado()">Clique aqui para sortear novamente</button>`)
 			}
 		</script>
 		
 	</head>
 	<body>
-		<button class="mdc-button mdc-button--raised lottery-button" onClick="exibeNumeroSorteado()">Clique aqui para sortear</button>
+		<button class="mdc-button mdc-button--raised lottery-button" id="lottery-button-color" onClick="exibeNumeroSorteado()">Clique aqui para sortear</button>
 		<div id="numero-sorteado"></div>
 		<div class="button"></div>
 	</body>
-	<script type="text/javascript">
-		
-	</script>
 </html>
 
