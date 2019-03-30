@@ -1,0 +1,16 @@
+@font-face {
+     font-family: "Montserrat-Bold";
+     src: url(Montserrat-Bold.ttf);
+}
+
+body {
+	font: 30px Montserrat-Bold;
+	color: rgb(74, 183, 170);
+	background-image: url("img/layout.png");
+	background-repeat: no-repeat;
+}
+
+#numero-sorteado {
+	margin-top: 349px;
+  margin-left: 474px;
+}

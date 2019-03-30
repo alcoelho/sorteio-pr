@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<title>Sorteio PetroRio</title>
+		<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+		<script type="text/javascript">
+			document.addEventListener('DOMContentLoaded', function () {
+				const numeroSorteado = Math.floor((Math.random() * 130) + 1);
+				console.log(numeroSorteado);
+				//document.getElementById('numero_sorteado').innerHTML = numeroSorteado;
+				const aaa = $('#numero_sorteado').html(numeroSorteado);
+				console.log(aaa);
+			});
+
+		</script>
+	</head>
+	<body>
+		<div id="numero-sorteado">
+			NÚMERO SORTEADO: <span id="numero_sorteado"></span>
+		</div>
+	</body>
+</html>
+
